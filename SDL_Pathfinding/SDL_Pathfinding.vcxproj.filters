@@ -66,6 +66,9 @@
     <ClCompile Include="SceneExercise3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FSM_Alg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h">
@@ -138,6 +141,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SceneExercise3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Decision_Algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FSM_Alg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FSMState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

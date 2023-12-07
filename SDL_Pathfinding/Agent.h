@@ -6,6 +6,8 @@
 #include "Path.h"
 #include "Vector2D.h"
 #include "utils.h"
+#include "Scene.h"
+#include "Decision_Algorithm.h"
 
 
 class Agent
@@ -24,7 +26,9 @@ private:
 	Vector2D velocity;
 	Vector2D target;
 
-	// Pathfinding
+	Scene* currentScene;
+	//Decision_Algorithm* brain;
+
 	Path path;
 	int currentTargetIndex;
 
@@ -53,6 +57,10 @@ public:
 	float getMaxVelocity();
 	float getMaxForce();
 	float getMass();
+	Scene* getScene();
+	Decision_Algorithm* getDecisionAlgorithm();
+	void setScene(Scene* scene);
+	void setDecisionAlgorithm(Decision_Algorithm* decision_Algorithm);
 	void setBehavior(SteeringBehavior *behavior);
 	void setPosition(Vector2D position);
 	void setTarget(Vector2D target);

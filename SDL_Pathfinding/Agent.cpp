@@ -61,6 +61,26 @@ float Agent::getMass()
 	return mass;
 }
 
+Scene* Agent::getScene()
+{
+	return currentScene;
+}
+
+Decision_Algorithm* Agent::getDecisionAlgorithm()
+{
+	//return brain;
+}
+
+void Agent::setScene(Scene* scene)
+{
+	currentScene = scene;
+}
+
+void Agent::setDecisionAlgorithm(Decision_Algorithm* decision_Algorithm)
+{
+	//brain = decision_Algorithm;
+}
+
 void Agent::setPosition(Vector2D _position)
 {
 	position = _position;
@@ -78,9 +98,6 @@ void Agent::setVelocity(Vector2D _velocity)
 
 void Agent::update(float dtime, SDL_Event *event)
 {
-
-	//cout << "agent update:" << endl;
-
 	switch (event->type) {
 		/* Keyboard & Mouse events */
 	case SDL_KEYDOWN:
@@ -92,6 +109,7 @@ void Agent::update(float dtime, SDL_Event *event)
 	}
 
 	// Apply the steering behavior
+	//brain->Update(this, dtime);
 	steering_behaviour->applySteeringForce(this, dtime);
 	
 	// Update orientation

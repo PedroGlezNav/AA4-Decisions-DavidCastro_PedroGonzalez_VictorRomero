@@ -5,6 +5,9 @@
 #include "SDL_SimpleApp.h"
 #include "SceneFSM.h"
 #include "SceneGOAP.h"
+#include "SceneExercise1.h"
+#include "SceneExercise2.h"
+#include "SceneExercise3.h"
 
 using namespace std;
 

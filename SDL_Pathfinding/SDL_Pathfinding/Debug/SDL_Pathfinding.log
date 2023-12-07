@@ -1,192 +1,10 @@
 ﻿  Agent.cpp
-  AStar_Alg.cpp
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(24,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(30,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(50,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(60,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(73,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\AStar_Alg.cpp(41,28): warning C4018: '<': signed/unsigned mismatch
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(256,38): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\AStar_Alg.cpp(20): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\AStar_Alg.cpp(20): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2676: binary '<': 'const _Ty2' does not define this operator or a conversion to a type acceptable to the predefined operator
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\map(585,17): message : could be 'bool std::operator <(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)': could not deduce template argument for 'const std::multimap<_Kty,_Ty,_Pr,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\map(585): message : see declaration of 'std::operator <'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)': could not deduce template argument for 'const std::map<_Kty,_Ty,_Pr,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::tuple<_Types...> &,const std::tuple<_Types...> &)': could not deduce template argument for 'const std::tuple<_Types...> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::queue<_Ty,_Container> &,const std::queue<_Ty,_Container> &)': could not deduce template argument for 'const std::queue<_Ty,_Container> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::deque<_Ty,_Alloc> &,const std::deque<_Ty,_Alloc> &)': could not deduce template argument for 'const std::deque<_Ty,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)': could not deduce template argument for 'const std::vector<_Ty,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)': could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-  BFS_Alg.cpp
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(24,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(30,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(50,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(60,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(73,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\BFS_Alg.cpp(29,28): warning C4018: '<': signed/unsigned mismatch
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(256,38): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\BFS_Alg.cpp(11): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\BFS_Alg.cpp(11): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
-  Djikstra_Alg.cpp
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(24,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(30,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(50,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(60,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(73,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Djikstra_Alg.cpp(35,28): warning C4018: '<': signed/unsigned mismatch
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(256,38): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Djikstra_Alg.cpp(14): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Djikstra_Alg.cpp(14): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2676: binary '<': 'const _Ty2' does not define this operator or a conversion to a type acceptable to the predefined operator
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\map(585,17): message : could be 'bool std::operator <(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)': could not deduce template argument for 'const std::multimap<_Kty,_Ty,_Pr,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\map(585): message : see declaration of 'std::operator <'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)': could not deduce template argument for 'const std::map<_Kty,_Ty,_Pr,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::tuple<_Types...> &,const std::tuple<_Types...> &)': could not deduce template argument for 'const std::tuple<_Types...> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::queue<_Ty,_Container> &,const std::queue<_Ty,_Container> &)': could not deduce template argument for 'const std::queue<_Ty,_Container> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::deque<_Ty,_Alloc> &,const std::deque<_Ty,_Alloc> &)': could not deduce template argument for 'const std::deque<_Ty,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)': could not deduce template argument for 'const std::vector<_Ty,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)': could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
+  FSM_Alg.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Agent.h(61,20): error C2143: syntax error: missing ';' before '*'
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Agent.h(61,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Agent.h(61,44): error C2238: unexpected token(s) preceding ';'
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Agent.h(63,28): error C2061: syntax error: identifier 'Decision_Algorithm'
   Greedy_Alg.cpp
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
@@ -215,62 +33,33 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.3162
           ]
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Greedy_Alg.cpp(17): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Greedy_Alg.cpp(17): message : see reference to function template instantiation 'std::pair<Vector2D,Vector2D>::pair<int,Vector2D,0>(std::pair<int,Vector2D> &&) noexcept(false)' being compiled
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2676: binary '<': 'const _Ty2' does not define this operator or a conversion to a type acceptable to the predefined operator
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\map(585,17): message : could be 'bool std::operator <(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::multimap<_Kty,_Ty,_Pr,_Alloc> &,const std::multimap<_Kty,_Ty,_Pr,_Alloc> &)': could not deduce template argument for 'const std::multimap<_Kty,_Ty,_Pr,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\map(585): message : see declaration of 'std::operator <'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::map<_Kty,_Ty,_Pr,_Alloc> &,const std::map<_Kty,_Ty,_Pr,_Alloc> &)': could not deduce template argument for 'const std::map<_Kty,_Ty,_Pr,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::tuple<_Types...> &,const std::tuple<_Types...> &)': could not deduce template argument for 'const std::tuple<_Types...> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::queue<_Ty,_Container> &,const std::queue<_Ty,_Container> &)': could not deduce template argument for 'const std::queue<_Ty,_Container> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::deque<_Ty,_Alloc> &,const std::deque<_Ty,_Alloc> &)': could not deduce template argument for 'const std::deque<_Ty,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)': could not deduce template argument for 'const std::vector<_Ty,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(460,1): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)': could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=Vector2D
-          ]
   Grid.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
   main.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(24,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(30,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(50,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(60,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(73,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
   PathFollowing.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
   SceneExercise1.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -291,6 +80,7 @@ C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRome
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
   SceneExercise2.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -315,6 +105,7 @@ C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRome
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\SceneExercise2.cpp(130,30): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\SceneExercise2.cpp(143,26): warning C4018: '<': signed/unsigned mismatch
   SceneExercise3.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -336,8 +127,34 @@ C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRome
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\SceneExercise3.cpp(87,23): warning C4018: '<': signed/unsigned mismatch
   SceneFSM.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(24,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(30,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(50,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(60,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(73,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\SceneFSM.cpp(42,26): warning C4018: '<': signed/unsigned mismatch
   SceneGOAP.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
   ScenePathFindingMouse.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
+  SDL_SimpleApp.cpp
   Seek.cpp
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Decision_Algorithm.h(6,22): error C2061: syntax error: identifier 'Agent'
+  utils.cpp
   Generating Code...
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\BFS_Alg.cpp(45): warning C4715: 'BFS_Alg::CalculatePathNodes': not all control paths return a value
+C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Greedy_Alg.cpp(54): warning C4715: 'Greedy_Alg::CalculatePathNodes': not all control paths return a value
