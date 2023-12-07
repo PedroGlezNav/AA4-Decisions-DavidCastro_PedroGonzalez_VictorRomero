@@ -39,6 +39,11 @@ private:
 	int sprite_w;
 	int sprite_h;
 
+	Uint8 r;
+	Uint8 g;
+	Uint8 b;
+	Uint8 a;
+
 public:
 	Agent();
 	~Agent();
@@ -54,6 +59,7 @@ public:
 	void setVelocity(Vector2D velocity);
 	void addPathPoint(Vector2D point);
 	void setCurrentTargetIndex(int idx);
+	void setPathCircleColor(Uint8 _r, Uint8 _g, Uint8 _b, Uint8 _a);
 	int getCurrentTargetIndex();
 	int getPathSize();
 	Vector2D getPathPoint(int idx);
@@ -61,5 +67,4 @@ public:
 	void update(float dtime, SDL_Event *event);
 	void draw();
 	bool loadSpriteTexture(char* filename, int num_frames=1);
-	
 };

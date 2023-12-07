@@ -38,6 +38,11 @@ int Grid::getNumCellY()
 	return num_cell_y;
 }
 
+std::vector<std::vector<int>> Grid::GetTerrain()
+{
+	return terrain;
+}
+
 Vector2D Grid::cell2pix(Vector2D cell)
 {
 	int offset = CELL_SIZE / 2;

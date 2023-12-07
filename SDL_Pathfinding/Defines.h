@@ -1,0 +1,4 @@
+#pragma once
+
+#define PLAYER_ENEMY_RADIUS 4
+#define ENEMY_HEURISTIC_ADDITIVE 200

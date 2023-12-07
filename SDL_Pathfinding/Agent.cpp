@@ -126,6 +126,14 @@ int Agent::getPathSize()
 	return path.points.size();
 }
 
+void Agent::setPathCircleColor(Uint8 _r, Uint8 _g, Uint8 _b, Uint8 _a)
+{
+	r = _r;
+	g = _g;
+	b = _b;
+	a = _a;
+}
+
 Vector2D Agent::getPathPoint(int idx)
 {
 	return path.points[idx];
@@ -147,7 +155,7 @@ void Agent::draw()
 	// Path
 	for (int i = 0; i < (int)path.points.size(); i++)
 	{
-		draw_circle(TheApp::Instance()->getRenderer(), (int)(path.points[i].x), (int)(path.points[i].y), 15, 255, 255, 0, 255);
+		draw_circle(TheApp::Instance()->getRenderer(), (int)(path.points[i].x), (int)(path.points[i].y), 15, r, g, b, a);
 		if (i > 0)
 			SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)(path.points[i - 1].x), (int)(path.points[i - 1].y), (int)(path.points[i].x), (int)(path.points[i].y));
 	}
