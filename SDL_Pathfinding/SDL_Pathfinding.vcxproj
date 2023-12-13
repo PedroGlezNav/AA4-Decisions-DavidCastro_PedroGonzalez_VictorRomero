@@ -135,6 +135,10 @@
     <ClCompile Include="AStar_Alg.cpp" />
     <ClCompile Include="BFS_Alg.cpp" />
     <ClCompile Include="Djikstra_Alg.cpp" />
+    <ClCompile Include="Flee.cpp" />
+    <ClCompile Include="FSMState_Chase.cpp" />
+    <ClCompile Include="FSMState_Evade.cpp" />
+    <ClCompile Include="FSMState_Wander.cpp" />
     <ClCompile Include="FSM_Alg.cpp" />
     <ClCompile Include="Greedy_Alg.cpp" />
     <ClCompile Include="Grid.cpp" />
@@ -155,9 +159,9 @@
     <ClInclude Include="AStar_Alg.h" />
     <ClInclude Include="BFS_Alg.h" />
     <ClInclude Include="Connection.h" />
-    <ClInclude Include="Decision_Algorithm.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="Djikstra_Alg.h" />
+    <ClInclude Include="Flee.h" />
     <ClInclude Include="FSMState.h" />
     <ClInclude Include="FSM_Alg.h" />
     <ClInclude Include="Graph.h" />

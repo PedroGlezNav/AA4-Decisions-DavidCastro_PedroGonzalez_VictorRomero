@@ -1,13 +1,5 @@
 #include "Seek.h"
 
-Seek::Seek()
-{
-}
-
-Seek::~Seek()
-{
-}
-
 void Seek::applySteeringForce(Agent *agent, float dtime)
 {
 	Vector2D desired_velocity = agent->getTarget() - agent->getPosition();

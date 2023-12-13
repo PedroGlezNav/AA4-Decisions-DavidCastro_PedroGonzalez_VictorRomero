@@ -17,10 +17,10 @@ SceneFSM::SceneFSM()
 	agent->setTarget(Vector2D(-20, -20));
 	agent->setPathCircleColor(255, 255, 0, 255);
 	agent->setScene(this);
-	//agent->setDecisionAlgorithm();
+	agent->setDecisionAlgorithm(new FSM_Alg);
 	agents.push_back(agent);
 
-	for (int iter = 0; iter < 7; iter++)
+	for (int iter = 0; iter < 2; iter++)
 	{
 		Agent* enemy = new Agent;
 		enemy->loadSpriteTexture("../res/zombie1.png", 8);
@@ -28,7 +28,7 @@ SceneFSM::SceneFSM()
 		enemy->setTarget(Vector2D(-20, -20));
 		enemy->setPathCircleColor((rand() % 255), (rand() % 255), (rand() % 255), 50);
 		agent->setScene(this);
-		//agent->setDecisionAlgorithm();
+		agent->setDecisionAlgorithm(new FSM_Alg);
 		agents.push_back(enemy);
 	}
 
@@ -49,10 +49,6 @@ SceneFSM::SceneFSM()
 	}
 
 	graph = new Graph(maze->GetTerrain());
-	nav_Algorithm = new Greedy_Alg();
-	printf_s("Breadth-First Search--------------------------------------\n\n");
-
-	enemies_Nav_Algorithm = new BFS_Alg();
 
 }
 
@@ -71,10 +67,38 @@ SceneFSM::~SceneFSM()
 
 void SceneFSM::update(float dtime, SDL_Event *event)
 {
-	
-	for each (Agent* agent in agents)
-	{
-		agent->update(dtime, event);
+	switch (event->type) {
+	case SDL_KEYDOWN:
+		/*if (event->key.keysym.scancode == SDL_SCANCODE_SPACE) {
+			draw_grid = !draw_grid;
+		}*/
+
+		if (event->key.keysym.scancode == SDL_SCANCODE_SPACE) {
+			printf_s("Booting up enemies--------------------------------------\n\n");
+			canEnemiesBehaviour != canEnemiesBehaviour;
+		}
+		break;
+
+	case SDL_MOUSEBUTTONDOWN:
+		if (event->button.button == SDL_BUTTON_LEFT)
+		{
+			agents[0]->clearPath();
+			Vector2D cell = maze->pix2cell(Vector2D((float)(event->button.x), (float)(event->button.y)));
+			if (maze->isValidCell(cell)) {
+				std::vector<Vector2D> pathPoints = agents[0]->getNavigationAlgorithm()->CalculatePathNodes(maze->pix2cell(agents[0]->getPosition()), cell, graph, std::vector<Vector2D>());
+				for each (Vector2D point in pathPoints)
+				{
+					agents[0]->addPathPoint((maze->cell2pix(point)));
+				}
+			}
+		}
+		break;
+	default:
+		break;
+	}
+
+	for (int iter = 0; iter < agents.size(); iter++) {
+		agents[iter]->update(dtime, event);
 	}
 }
 

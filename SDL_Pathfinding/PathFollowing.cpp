@@ -1,13 +1,5 @@
 #include "PathFollowing.h"
 
-PathFollowing::PathFollowing()
-{
-}
-
-PathFollowing::~PathFollowing()
-{
-}
-
 void PathFollowing::applySteeringForce(Agent *agent, float dtime)
 {
 	//There is a path and we have not started to follow it

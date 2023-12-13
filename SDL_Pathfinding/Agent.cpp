@@ -3,18 +3,20 @@
 using namespace std;
 
 Agent::Agent() : sprite_texture(0),
-                 position(Vector2D(100, 100)),
-	             target(Vector2D(1000, 100)),
-	             velocity(Vector2D(0,0)),
-	             currentTargetIndex(-1),
+				 position(Vector2D(100, 100)),
+				 target(Vector2D(1000, 100)),
+				 velocity(Vector2D(0, 0)),
+				 currentTargetIndex(-1),
 				 mass(0.1f),
 				 max_force(150),
 				 max_velocity(200),
 				 orientation(0),
 				 sprite_num_frames(0),
-	             sprite_w(0),
-	             sprite_h(0),
-	             draw_sprite(false)
+				 sprite_w(0),
+				 sprite_h(0),
+				 draw_sprite(false),
+				 nav_Algorithm(new AStar_Alg),
+				 hasGun(false)
 {
 }
 
@@ -66,11 +68,6 @@ Scene* Agent::getScene()
 	return currentScene;
 }
 
-Decision_Algorithm* Agent::getDecisionAlgorithm()
-{
-	return brain;
-}
-
 void Agent::setScene(Scene* scene)
 {
 	currentScene = scene;
@@ -78,7 +75,17 @@ void Agent::setScene(Scene* scene)
 
 void Agent::setDecisionAlgorithm(Decision_Algorithm* decision_Algorithm)
 {
-	//brain = decision_Algorithm;
+	brain = decision_Algorithm;
+}
+
+void Agent::setNavigationAlgorithm(Nav_Algorithm* newNavAlgorithm)
+{
+	nav_Algorithm = newNavAlgorithm;
+}
+
+Nav_Algorithm* Agent::getNavigationAlgorithm()
+{
+	return nav_Algorithm;
 }
 
 void Agent::setPosition(Vector2D _position)
@@ -98,18 +105,10 @@ void Agent::setVelocity(Vector2D _velocity)
 
 void Agent::update(float dtime, SDL_Event *event)
 {
-	switch (event->type) {
-		/* Keyboard & Mouse events */
-	case SDL_KEYDOWN:
-		if (event->key.keysym.scancode == SDL_SCANCODE_SPACE)
-			draw_sprite = !draw_sprite;
-		break;
-	default:
-		break;
+	// Call the brain if able and apply the steering behavior
+	if (brain != nullptr) {
+		brain->Update(this, dtime);
 	}
-
-	// Apply the steering behavior
-	//brain->Update(this, dtime);
 	steering_behaviour->applySteeringForce(this, dtime);
 	
 	// Update orientation
@@ -221,4 +220,14 @@ bool Agent::loadSpriteTexture(char* filename, int _num_frames)
 		SDL_FreeSurface(image);
 
 	return true;
+}
+
+bool Agent::getHasGun()
+{
+	return hasGun;
+}
+
+void Agent::setHasGun(bool newHasGun)
+{
+	hasGun = newHasGun;
 }

@@ -5,13 +5,6 @@
 #include "Scene.h"
 #include "Vector2D.h"
 
-#define SRC_WIDTH 1280
-#define SRC_HEIGHT 768
-#define CELL_SIZE 32
-
-#define FRAMES_PER_SEC 30
-#define MAX_DTIME 0.05
-
 class SDL_SimpleApp
 {
 private:

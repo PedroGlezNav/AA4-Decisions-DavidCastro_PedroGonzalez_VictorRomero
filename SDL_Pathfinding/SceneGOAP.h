@@ -5,7 +5,6 @@
 #include <string>
 #include <time.h>
 #include "Scene.h"
-#include "Agent.h"
 #include "Seek.h"
 #include "PathFollowing.h"
 #include "Grid.h"
