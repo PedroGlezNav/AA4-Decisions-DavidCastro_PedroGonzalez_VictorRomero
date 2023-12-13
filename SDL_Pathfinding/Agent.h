@@ -27,7 +27,7 @@ private:
 	Vector2D target;
 
 	Scene* currentScene;
-	//Decision_Algorithm* brain;
+	Decision_Algorithm* brain;
 
 	Path path;
 	int currentTargetIndex;

@@ -1,5 +1,6 @@
 #pragma once
-#include "Agent.h"
+
+class Agent;
 
 class Decision_Algorithm {
 public:

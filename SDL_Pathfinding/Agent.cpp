@@ -68,7 +68,7 @@ Scene* Agent::getScene()
 
 Decision_Algorithm* Agent::getDecisionAlgorithm()
 {
-	//return brain;
+	return brain;
 }
 
 void Agent::setScene(Scene* scene)
