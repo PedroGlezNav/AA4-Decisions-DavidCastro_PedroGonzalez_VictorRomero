@@ -17,18 +17,17 @@ SceneFSM::SceneFSM()
 	agent->setTarget(Vector2D(-20, -20));
 	agent->setPathCircleColor(255, 255, 0, 255);
 	agent->setScene(this);
-	agent->setDecisionAlgorithm(new FSM_Alg);
 	agents.push_back(agent);
 
-	for (int iter = 0; iter < 2; iter++)
+	for (int iter = 0; iter < NUMBER_OF_ENEMIES; iter++)
 	{
 		Agent* enemy = new Agent;
 		enemy->loadSpriteTexture("../res/zombie1.png", 8);
 		enemy->setBehavior(new PathFollowing);
 		enemy->setTarget(Vector2D(-20, -20));
-		enemy->setPathCircleColor((rand() % 255), (rand() % 255), (rand() % 255), 50);
-		agent->setScene(this);
-		agent->setDecisionAlgorithm(new FSM_Alg);
+		enemy->setPathCircleColor(0, 0, 255, 50);
+		enemy->setScene(this);
+		enemy->setDecisionAlgorithm(new FSM_Alg);
 		agents.push_back(enemy);
 	}
 
@@ -69,14 +68,19 @@ void SceneFSM::update(float dtime, SDL_Event *event)
 {
 	switch (event->type) {
 	case SDL_KEYDOWN:
-		/*if (event->key.keysym.scancode == SDL_SCANCODE_SPACE) {
-			draw_grid = !draw_grid;
-		}*/
-
 		if (event->key.keysym.scancode == SDL_SCANCODE_SPACE) {
+			canEnemiesBehaviour = !canEnemiesBehaviour;
+			for (int iter = 1; iter < agents.size(); iter++){
+				agents[iter]->clearPath();
+			}
 			printf_s("Booting up enemies--------------------------------------\n\n");
-			canEnemiesBehaviour != canEnemiesBehaviour;
 		}
+
+		if (event->key.keysym.scancode == SDL_SCANCODE_BACKSPACE) {
+			agents[0]->setHasGun(!agents[0]->getHasGun());
+			printf_s("Changing gun status--------------------------------------\n\n");
+		}
+
 		break;
 
 	case SDL_MOUSEBUTTONDOWN:

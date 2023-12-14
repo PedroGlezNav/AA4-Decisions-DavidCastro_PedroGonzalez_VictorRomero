@@ -15,7 +15,7 @@ Agent::Agent() : sprite_texture(0),
 				 sprite_w(0),
 				 sprite_h(0),
 				 draw_sprite(false),
-				 nav_Algorithm(new AStar_Alg),
+				 nav_Algorithm(new Greedy_Alg),
 				 hasGun(false)
 {
 }
@@ -230,4 +230,12 @@ bool Agent::getHasGun()
 void Agent::setHasGun(bool newHasGun)
 {
 	hasGun = newHasGun;
+}
+
+bool Agent::intersect(Vector2D A, Vector2D B, Vector2D C, Vector2D D) {
+	return ccw(A, C, D) != ccw(B, C, D) && ccw(A, B, C) != ccw(A, B, D);
+}
+
+bool Agent::ccw(Vector2D A, Vector2D B, Vector2D C) {
+	return (C.y - A.y) * (B.x - A.x) > (B.y - A.y) * (C.x - A.x);
 }

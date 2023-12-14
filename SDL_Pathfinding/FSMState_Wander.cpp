@@ -2,12 +2,13 @@
 
 void FSMState_Wander::Enter(Agent* agent)
 {
-    agent->setBehavior(new PathFollowing);
+	agent->setPathCircleColor(0, 0, 255, 50);
+	agent->clearPath();
 }
 
 FSMState* FSMState_Wander::Update(Agent* agent, float dtime)
 {
-    if (Vector2D::Distance(agent->getScene()->GetAgents()[0]->getPosition(), agent->getPosition()) < PLAYER_ENEMY_RADIUS) {
+    if (Vector2D::Distance(agent->getScene()->GetAgents()[0]->getPosition(), agent->getPosition()) < agent->getScene()->getMaze()->cell2pix(PLAYER_ENEMY_RADIUS).x) {
         return new FSMState_Chase;
     }
     else {
@@ -24,8 +25,4 @@ FSMState* FSMState_Wander::Update(Agent* agent, float dtime)
 		}
         return nullptr;
     }
-}
-
-void FSMState_Wander::Exit()
-{
 }

@@ -96,4 +96,6 @@ public:
 	bool loadSpriteTexture(char* filename, int num_frames=1);
 	bool getHasGun();
 	void setHasGun(bool newHasGun);
+	bool intersect(Vector2D A, Vector2D B, Vector2D C, Vector2D D);
+	bool ccw(Vector2D A, Vector2D B, Vector2D C);
 };
