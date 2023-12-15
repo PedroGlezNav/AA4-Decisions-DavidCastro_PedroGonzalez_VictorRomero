@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-#include <vector>
+#include <unordered_map>
+
 #include "Grid.h"
 #include "Graph.h"
 
@@ -9,11 +10,25 @@ class Agent;
 class Scene
 {
 protected:
+	enum Colors
+	{
+		WHITE, BLACK, RED, ORANGE, YELLOW, GREEN, PINK, BLUE
+	};
+
+	struct Key {
+	public:
+		Key(Vector2D newPos, int newIndex) : position(newPos), index(newIndex) {};
+		Vector2D position;
+		int index;
+	};
+
 	std::vector<Agent*> agents;
 	bool canEnemiesBehaviour = false;
 	Grid* maze;
 	bool draw_grid;
 	Graph* graph;
+	Vector2D coinPosition;
+	std::vector<Key*> keyPositions;
 
 public:
 	Scene() {};

@@ -50,15 +50,14 @@ int main(int argc, char ** argv)
 				delete(curr_scene);
 				curr_scene = new SceneFSM;
 				app->setWindowTitle(curr_scene->getTitle());
+				system("CLS");
 			}
 			if (event.key.keysym.scancode == SDL_SCANCODE_2)
 			{
 				delete(curr_scene);
 				curr_scene = new SceneGOAP;
 				app->setWindowTitle(curr_scene->getTitle());
-			}
-			if (event.key.keysym.scancode == SDL_SCANCODE_3)
-			{
+				system("CLS");
 			}
 			if ((event.key.keysym.scancode == SDL_SCANCODE_Q) || (event.key.keysym.scancode == SDL_SCANCODE_ESCAPE))
 			{

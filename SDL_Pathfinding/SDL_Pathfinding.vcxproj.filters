@@ -81,6 +81,9 @@
     <ClCompile Include="Flee.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GOAP_Alg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h">
@@ -162,6 +165,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Flee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GOAP_Alg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GOAPAction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
