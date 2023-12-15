@@ -25,12 +25,11 @@ FSMState* FSMState_Evade::Update(Agent* agent, float dtime)
 
             if (!agent->getScene()->getMaze()->isValidCell(cell)) {
                 Vector2D direction = agent->getScene()->GetAgents()[0]->getPosition() - agent->getPosition();
-                Vector2D pp1 = (agent->getPosition() + Vector2D(-direction.x, direction.y)) * 1000;
-                Vector2D pp2 = (agent->getPosition() + Vector2D(direction.x, -direction.y)) * 1000;
+                Vector2D pp1 = (agent->getPosition() + Vector2D(-direction.y, direction.x)) * 10000;
+                Vector2D pp2 = (agent->getPosition() + Vector2D(direction.y, -direction.x)) * 10000;
 
                 while (!agent->getScene()->getMaze()->isValidCell(cell) && !agent->intersect(agent->getPosition(), cell, pp1, pp2) &&
                     Vector2D::Distance(agent->getScene()->getMaze()->pix2cell(agent->getScene()->GetAgents()[0]->getPosition()), cell) > PLAYER_RANDOM_EVADE_LIMIT) {
-
                     cell = Vector2D((float)(rand() % agent->getScene()->getMaze()->getNumCellX()), (float)(rand() % agent->getScene()->getMaze()->getNumCellY()));
                 }
             }

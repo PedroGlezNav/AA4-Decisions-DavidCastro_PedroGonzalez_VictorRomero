@@ -1,21 +1,21 @@
 ﻿  FSMState_Evade.cpp
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(24,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(30,16): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(50,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(60,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(73,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-  SDL_Pathfinding.vcxproj -> C:\Users\usuario\source\repos\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\bin\SDL_Pathfinding.exe
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(11,21): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(12,22): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(15,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(19,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(24,16): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(25,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(30,16): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(31,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(37,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(50,27): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(60,21): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(73,21): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(74,22): warning C4018: '<': signed/unsigned mismatch
+C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\SDL_Pathfinding\Graph.h(110,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  SDL_Pathfinding.vcxproj -> C:\GitKraken\AA4-Decisions-DavidCastro_PedroGonzalez_VictorRomero\bin\SDL_Pathfinding.exe
