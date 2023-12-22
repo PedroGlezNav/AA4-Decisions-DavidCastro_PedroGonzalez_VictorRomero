@@ -4,6 +4,8 @@
 class Nav_Algorithm {
 protected:
 	int nodesInFrontier;
+	float cost;
+
 public:
 	virtual std::vector<Vector2D> CalculatePathNodes(Vector2D agentPos, Vector2D goalPos, Graph* graph, std::vector<Vector2D> enemyPositions) = 0;
 
@@ -29,5 +31,9 @@ public:
 
 	int GetNodesInFrontier() {
 		return nodesInFrontier;
+	}
+
+	float GetCost() {
+		return cost;
 	}
 };

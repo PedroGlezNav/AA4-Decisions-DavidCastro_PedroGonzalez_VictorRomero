@@ -18,10 +18,12 @@ private:
 	std::vector<GOAPAction*> plan;
 	int idx_currentAction = 0;
 
-	std::vector<GOAPAction*> CalculatePath(GOAPWorldState, GOAPWorldState);
+	Agent* simulatedAgent;
+
+	void CalculatePlan(GOAPWorldState, GOAPWorldState, std::vector<std::pair<AstarNode*, AstarNode*>>);
 public:
 
-	GOAP_Alg(std::vector<Object*> object);
+	GOAP_Alg(std::vector<Object*> object, Agent* agent);
 
 	virtual void Update(Agent* agent, float dtime) override;
 	void AStar(GOAPWorldState start, GOAPWorldState goal);

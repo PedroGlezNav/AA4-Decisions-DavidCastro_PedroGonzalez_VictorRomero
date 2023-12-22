@@ -22,6 +22,13 @@ std::vector<Vector2D> AStar_Alg::CalculatePathNodes(Vector2D agentPos, Vector2D 
 	while (!frontier.empty())
 	{
 		if (frontier.top().second == goalPos) {
+			
+			for each (std::pair<Vector2D, float> node in costSoFar) {
+				if (node.first == frontier.top().second) {
+					cost = node.second;
+				}
+			}
+
 			return CalculatePath(agentPos, goalPos, cameFrom);
 		}
 

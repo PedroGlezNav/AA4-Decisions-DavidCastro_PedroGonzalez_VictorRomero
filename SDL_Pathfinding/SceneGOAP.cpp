@@ -13,13 +13,8 @@ SceneGOAP::SceneGOAP()
 
 	Vector2D rand_cell(-1, -1);
 
-	while (!maze->isValidCell(rand_cell)) {
-		rand_cell = Vector2D((float)(maze->getNumCellX()/2), (float)(maze->getNumCellY() / 2));
-	}
-	agents[0]->setPosition(maze->cell2pix(rand_cell));
-
 	Vector2D coinPosition = Vector2D(-1, -1);
-	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3) || Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition())) < COIN_SPAWN_LIMIT)
+	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3) || maze->getCellValue(coinPosition) == Colors::BLACK)
 		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 
 	int roomType = maze->getCellValue(Vector2D((float)coinPosition.x, (float)coinPosition.y));
@@ -49,8 +44,15 @@ SceneGOAP::SceneGOAP()
 	agent->setTarget(Vector2D(-20, -20));
 	agent->setPathCircleColor(255, 255, 0, 255);
 	agent->setScene(this);
-	agent->setDecisionAlgorithm(new GOAP_Alg(tempObj));
+	do{
+		rand_cell = Vector2D((float)(maze->getNumCellX() / 2), (float)(maze->getNumCellY() / 2));
+	} while (!maze->isValidCell(rand_cell));
+
+	agent->setPosition(maze->cell2pix(rand_cell));
+	agent->setDecisionAlgorithm(new GOAP_Alg(tempObj, agent));
 	agents.push_back(agent);
+
+
 }
 
 SceneGOAP::~SceneGOAP()

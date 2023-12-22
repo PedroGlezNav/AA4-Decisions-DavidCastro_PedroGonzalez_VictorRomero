@@ -56,6 +56,10 @@ public:
 		canEnemiesBehaviour = newCanEnemiesBehaviour;
 	}
 
+	std::vector<Object*> getKeyPositions() {
+		return keyPositions;
+	}
+
 	Grid* getMaze() {
 		return maze;
 	}

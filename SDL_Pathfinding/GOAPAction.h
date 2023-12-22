@@ -10,6 +10,11 @@ public:
 	{
 		return (value.first == rhs.value.first && value.second == rhs.value.second);
 	}
+
+	inline bool operator!=(const GOAPWorldState& rhs) const
+	{
+		return !(value.first == rhs.value.first && value.second == rhs.value.second);
+	}
 };
 
 class GOAPAction {
@@ -18,7 +23,8 @@ public:
 	GOAPWorldState effects;
 	int cost = 0;
 
-	virtual void GetCost(Agent* agent) = 0;
+	virtual float GetCost(Agent* agent) = 0;
+
 };
 
 class GOAPAction_GoToObject : public GOAPAction {
@@ -28,8 +34,8 @@ public:
 	GOAPAction_GoToObject(Object*);
 
 	// Heredado vía GOAPAction
-	void GetCost(Agent* agent) override; //Llamar al agent a calcular path y pillar el coste (igual hay que cambiar cosas)
-	void GetPath();
+	float GetCost(Agent* agent) override; //Llamar al agent a calcular path y pillar el coste (igual hay que cambiar cosas)
+	std::vector<Vector2D> GetPath(Agent* agent);
 
 };
 
