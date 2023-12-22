@@ -140,6 +140,7 @@
     <ClCompile Include="FSMState_Evade.cpp" />
     <ClCompile Include="FSMState_Wander.cpp" />
     <ClCompile Include="FSM_Alg.cpp" />
+    <ClCompile Include="GOAPAction.cpp" />
     <ClCompile Include="GOAP_Alg.cpp" />
     <ClCompile Include="Greedy_Alg.cpp" />
     <ClCompile Include="Grid.cpp" />

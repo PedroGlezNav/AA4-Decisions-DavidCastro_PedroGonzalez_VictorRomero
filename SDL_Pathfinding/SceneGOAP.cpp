@@ -11,15 +11,6 @@ SceneGOAP::SceneGOAP()
 
 	srand((unsigned int)time(NULL));
 
-	Agent* agent = new Agent;
-	agent->loadSpriteTexture("../res/soldier.png", 4);
-	agent->setBehavior(new PathFollowing);
-	agent->setTarget(Vector2D(-20, -20));
-	agent->setPathCircleColor(255, 255, 0, 255);
-	agent->setScene(this);
-	agent->setDecisionAlgorithm(new GOAP_Alg);
-	agents.push_back(agent);
-
 	Vector2D rand_cell(-1, -1);
 
 	while (!maze->isValidCell(rand_cell)) {
@@ -27,19 +18,39 @@ SceneGOAP::SceneGOAP()
 	}
 	agents[0]->setPosition(maze->cell2pix(rand_cell));
 
-	coinPosition = Vector2D(-1, -1);
+	Vector2D coinPosition = Vector2D(-1, -1);
 	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3) || Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition())) < COIN_SPAWN_LIMIT)
 		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+
+	int roomType = maze->getCellValue(Vector2D((float)coinPosition.x, (float)coinPosition.y));
+
+	coin = new Object(coinPosition, Colors::GOLD, roomType);
 
 	loadCoinTextures("../res/keys.png");
 	for (int iter = 0; iter < NUMBER_OF_COINS; iter++) {
 		do {
 			rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 		} while ((!maze->isValidCell(rand_cell)));
-		keyPositions.push_back(new Key(rand_cell, iter + Scene::Colors::RED));
+
+		roomType = maze->getCellValue(Vector2D((float)rand_cell.x, (float)rand_cell.y));
+
+		keyPositions.push_back(new Object(rand_cell, iter + Colors::RED, roomType));
 	}
 
 	graph = new Graph(maze->GetTerrain());
+
+	std::vector<Object*> tempObj = keyPositions;
+
+	tempObj.push_back(coin);
+
+	Agent* agent = new Agent;
+	agent->loadSpriteTexture("../res/soldier.png", 4);
+	agent->setBehavior(new PathFollowing);
+	agent->setTarget(Vector2D(-20, -20));
+	agent->setPathCircleColor(255, 255, 0, 255);
+	agent->setScene(this);
+	agent->setDecisionAlgorithm(new GOAP_Alg(tempObj));
+	agents.push_back(agent);
 }
 
 SceneGOAP::~SceneGOAP()
@@ -118,28 +129,28 @@ void SceneGOAP::drawMaze()
 		{
 			switch (maze->getCellValue(Vector2D((float)i, (float)j)))
 			{
-			case Scene::Colors::WHITE:
+			case Colors::WHITE:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 255, 255, 255, 255);
 				break;
-			case Scene::Colors::BLACK:
+			case Colors::BLACK:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 0, 0, 0, 255);
 				break;
-			case Scene::Colors::RED:
+			case Colors::RED:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 255, 0, 0, 100);
 				break;
-			case Scene::Colors::ORANGE:
+			case Colors::ORANGE:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 255, 94, 5, 100);
 				break;
-			case Scene::Colors::YELLOW:
+			case Colors::YELLOW:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 255, 255, 0, 100);
 				break;
-			case Scene::Colors::GREEN:
+			case Colors::GREEN:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 0, 255, 0, 100);
 				break;
-			case Scene::Colors::PINK:
+			case Colors::PINK:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 255, 105, 180, 100);
 				break;
-			case Scene::Colors::BLUE:
+			case Colors::BLUE:
 				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 0, 0, 255, 100);
 				break;
 			default:
@@ -154,7 +165,7 @@ void SceneGOAP::drawMaze()
 
 void SceneGOAP::drawCoin()
 {
-	Vector2D coin_coords = maze->cell2pix(coinPosition);
+	Vector2D coin_coords = maze->cell2pix(coin->position);
 	int offset = CELL_SIZE / 2;
 	SDL_Rect dstrect = { (int)coin_coords.x - offset, (int)coin_coords.y - offset, CELL_SIZE, CELL_SIZE };
 	SDL_RenderCopy(TheApp::Instance()->getRenderer(), coin_texture, NULL, &dstrect);
