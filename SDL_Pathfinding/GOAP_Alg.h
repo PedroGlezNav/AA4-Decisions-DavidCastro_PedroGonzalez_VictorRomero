@@ -5,8 +5,8 @@ struct AstarNode {
 public:
 	float f = 0, g = 0, h = 0;
 
-	GOAPWorldState parentWs;
-	GOAPWorldState actualWs;
+	GOAPWorldState* parentWs;
+	GOAPWorldState* actualWs;
 
 	GOAPAction* action;
 };
@@ -18,11 +18,11 @@ private:
 	std::vector<GOAPAction*> plan;
 	int idx_currentAction = 0;
 
-	Agent* simulatedAgent;
+	Agent *simulatedAgent;
 
 	bool firstIterNoPlan = false;
 
-	void CalculatePlan(GOAPWorldState, GOAPWorldState, std::vector<std::pair<AstarNode*, AstarNode*>>);
+	void CalculatePlan(GOAPWorldState, GOAPWorldState, std::vector<AstarNode*>);
 public:
 
 	GOAP_Alg(std::vector<Object*> object, Agent* agent);

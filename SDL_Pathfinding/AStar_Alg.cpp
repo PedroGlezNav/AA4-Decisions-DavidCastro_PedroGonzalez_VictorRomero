@@ -32,13 +32,12 @@ std::vector<Vector2D> AStar_Alg::CalculatePathNodes(Vector2D agentPos, Vector2D 
 			return CalculatePath(agentPos, goalPos, cameFrom);
 		}
 
-		std::vector<Connection*> connections= tempGraph.GetConnectionsFromNode(frontier.top().second);
+		std::vector<Connection*> connections = tempGraph.GetConnectionsFromNode(frontier.top().second);
 		frontier.pop();
 		Vector2D neighbour;
 
 		for each (Connection* frontierConnection in connections)
 		{
-
 			neighbour = frontierConnection->GetToNode()->GetPosition();
 
 			bool hasFoundIt = false; 
@@ -56,7 +55,7 @@ std::vector<Vector2D> AStar_Alg::CalculatePathNodes(Vector2D agentPos, Vector2D 
 			}
 			newCost += frontierConnection->GetCost();
 
-			if (!hasFoundIt) 
+			if (!hasFoundIt)
 			{
 				costSoFar.push_back(std::make_pair(frontierConnection->GetToNode()->GetPosition(), newCost));
 				cameFrom.push_back(std::make_pair(frontierConnection->GetFromNode()->GetPosition(), frontierConnection->GetToNode()->GetPosition()));

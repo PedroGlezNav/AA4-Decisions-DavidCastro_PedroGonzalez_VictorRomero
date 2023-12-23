@@ -190,9 +190,6 @@
   <ItemGroup>
     <Image Include="..\res\spritesheet.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\res\maze.csv" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

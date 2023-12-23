@@ -35,7 +35,7 @@ protected:
 	bool draw_grid;
 	Graph* graph;
 	Object* coin;
-	std::vector<Object*> keyPositions;
+	std::vector<Object*>* keyPositions;
 
 public:
 	Scene() {};
@@ -56,7 +56,7 @@ public:
 		canEnemiesBehaviour = newCanEnemiesBehaviour;
 	}
 
-	std::vector<Object*> getKeyPositions() {
+	std::vector<Object*>* getKeyPositions() {
 		return keyPositions;
 	}
 

@@ -21,20 +21,22 @@ SceneGOAP::SceneGOAP()
 
 	coin = new Object(coinPosition, Colors::GOLD, roomType);
 
+	keyPositions = new vector<Object*>;
 	loadCoinTextures("../res/keys.png");
-	for (int iter = 0; iter < NUMBER_OF_COINS; iter++) {
+	for (int iter = 0; iter < NUMBER_OF_KEYS; iter++) 
+	{
 		do {
 			rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
-		} while ((!maze->isValidCell(rand_cell)));
+		} while (!maze->isValidCell(rand_cell) || maze->getCellValue(rand_cell) == iter + Colors::RED);
 
-		roomType = maze->getCellValue(Vector2D((float)rand_cell.x, (float)rand_cell.y));
+		roomType = maze->getCellValue(rand_cell);
 
-		keyPositions.push_back(new Object(rand_cell, iter + Colors::RED, roomType));
+		keyPositions->push_back(new Object(rand_cell, iter + Colors::RED, roomType));
 	}
 
 	graph = new Graph(maze->GetTerrain());
 
-	std::vector<Object*> tempObj = keyPositions;
+	std::vector<Object*> tempObj = *keyPositions;
 
 	tempObj.push_back(coin);
 
@@ -52,8 +54,6 @@ SceneGOAP::SceneGOAP()
 	agent->setPosition(maze->cell2pix(rand_cell));
 	agent->setDecisionAlgorithm(new GOAP_Alg(tempObj, agent));
 	agents.push_back(agent);
-
-
 }
 
 SceneGOAP::~SceneGOAP()
@@ -94,7 +94,7 @@ void SceneGOAP::draw()
 	drawMaze();
 	drawCoin();
 
-	for (int iter = 0; iter < NUMBER_OF_COINS; iter++)
+	for (int iter = 0; iter < NUMBER_OF_KEYS; iter++)
 		drawKey(iter);
 
 	if (draw_grid)
@@ -175,7 +175,7 @@ void SceneGOAP::drawCoin()
 }
 
 void SceneGOAP::drawKey(int index) {
-	Vector2D key_coords = maze->cell2pix(keyPositions[index]->position);
+	Vector2D key_coords = maze->cell2pix(keyPositions->at(index)->position);
 	SDL_Rect srcrect = { index * sprite_w, 0, sprite_w, sprite_h };
 	SDL_Rect dstrect = { (int)key_coords.x - (sprite_w / 2), (int)key_coords.y - (sprite_h / 2), sprite_w, sprite_h };
 	SDL_Point center = { sprite_w / 2, sprite_h / 2 };

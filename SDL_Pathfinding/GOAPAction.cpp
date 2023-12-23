@@ -19,16 +19,22 @@ GOAPAction_GoToObject::GOAPAction_GoToObject(Object* _object)
 
 float GOAPAction_GoToObject::GetCost(Agent* agent)
 {
-	agent->getNavigationAlgorithm()->CalculatePathNodes(
-		agent->getScene()->getMaze()->pix2cell(agent->getPosition()), 
-		object->position, 
-		agent->getScene()->getGraph(), 
-		std::vector<Vector2D>());
+	std::vector<Vector2D> nullVector;
+
+	std::vector<Vector2D> pathWeDontCare = agent->getNavigationAlgorithm()->CalculatePathNodes(
+											agent->getScene()->getMaze()->pix2cell(agent->getPosition()),
+											object->position,
+											agent->getScene()->getGraph(),
+											nullVector);
 
 	return agent->getNavigationAlgorithm()->GetCost();
 }
 
 std::vector<Vector2D> GOAPAction_GoToObject::GetPath(Agent* agent)
 {
-	return agent->getNavigationAlgorithm()->CalculatePathNodes(agent->getPosition(), object->position, agent->getScene()->getGraph(), std::vector<Vector2D>());
+	return agent->getNavigationAlgorithm()->CalculatePathNodes(
+		agent->getScene()->getMaze()->pix2cell(agent->getPosition()), 
+		object->position, 
+		agent->getScene()->getGraph(), 
+		std::vector<Vector2D>());
 }
