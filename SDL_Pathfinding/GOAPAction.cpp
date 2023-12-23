@@ -19,7 +19,12 @@ GOAPAction_GoToObject::GOAPAction_GoToObject(Object* _object)
 
 float GOAPAction_GoToObject::GetCost(Agent* agent)
 {
-	agent->getNavigationAlgorithm()->CalculatePathNodes(agent->getPosition(), object->position, agent->getScene()->getGraph(), std::vector<Vector2D>());
+	agent->getNavigationAlgorithm()->CalculatePathNodes(
+		agent->getScene()->getMaze()->pix2cell(agent->getPosition()), 
+		object->position, 
+		agent->getScene()->getGraph(), 
+		std::vector<Vector2D>());
+
 	return agent->getNavigationAlgorithm()->GetCost();
 }
 

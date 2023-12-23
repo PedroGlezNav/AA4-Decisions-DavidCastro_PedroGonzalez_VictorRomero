@@ -20,6 +20,8 @@ private:
 
 	Agent* simulatedAgent;
 
+	bool firstIterNoPlan = false;
+
 	void CalculatePlan(GOAPWorldState, GOAPWorldState, std::vector<std::pair<AstarNode*, AstarNode*>>);
 public:
 

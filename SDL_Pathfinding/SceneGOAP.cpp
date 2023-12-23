@@ -43,6 +43,7 @@ SceneGOAP::SceneGOAP()
 	agent->setBehavior(new PathFollowing);
 	agent->setTarget(Vector2D(-20, -20));
 	agent->setPathCircleColor(255, 255, 0, 255);
+	agent->setNavigationAlgorithm(new AStar_Alg);
 	agent->setScene(this);
 	do{
 		rand_cell = Vector2D((float)(maze->getNumCellX() / 2), (float)(maze->getNumCellY() / 2));

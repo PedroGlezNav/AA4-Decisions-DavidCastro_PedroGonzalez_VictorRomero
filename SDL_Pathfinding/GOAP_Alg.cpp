@@ -34,28 +34,30 @@ GOAP_Alg::GOAP_Alg(std::vector<Object*> object, Agent* _agent)
 
 void GOAP_Alg::Update(Agent* agent, float dtime)
 {
-	GOAPWorldState start;
-	start.value = std::pair<int, bool>(Colors::BLACK, true);
+	if (!firstIterNoPlan) {
+		GOAPWorldState start;
+		start.value = std::pair<int, bool>(Colors::BLACK, true);
 
-	GOAPWorldState goal;
-	start.value = std::pair<int, bool>(Colors::GOLD, true);
+		GOAPWorldState goal;
+		goal.value = std::pair<int, bool>(Colors::GOLD, true);
 
-	
-	if (plan.empty()) AStar(start, goal);
-	else {
-		if (dynamic_cast<GOAPAction_GoToObject*>(plan[idx_currentAction]) != NULL) {
-			if (agent->getPathSize() == 0) {
-				std::vector<Vector2D> path = dynamic_cast<GOAPAction_GoToObject*>(plan[idx_currentAction])->GetPath(agent);
-				
-				for each (Vector2D point in path)
-				{
-					agent->addPathPoint(point);
+
+		if (plan.empty()) AStar(start, goal);
+		else {
+			if (dynamic_cast<GOAPAction_GoToObject*>(plan[idx_currentAction]) != NULL) {
+				if (agent->getPathSize() == 0) {
+					std::vector<Vector2D> path = dynamic_cast<GOAPAction_GoToObject*>(plan[idx_currentAction])->GetPath(agent);
+
+					for each (Vector2D point in path)
+					{
+						agent->addPathPoint(point);
+					}
+
+					idx_currentAction++;
+
 				}
-				
-				idx_currentAction++;
-
-			}
-		}//if there were other actions, make logic to execute them
+			}//if there were other actions, make logic to execute them
+		}
 	}
 }
 
@@ -63,7 +65,7 @@ void GOAP_Alg::AStar(GOAPWorldState start, GOAPWorldState goal)
 {
 	AstarNode* startNode = new AstarNode();
 
-	startNode->actualWs = start;
+	startNode->parentWs = start;
 
 	std::priority_queue<std::pair<float, AstarNode*>, std::vector<std::pair<float, AstarNode*>>, std::greater<std::pair<float, AstarNode*>>> frontier;
 	frontier.push(std::make_pair(0.f, startNode));
@@ -78,26 +80,35 @@ void GOAP_Alg::AStar(GOAPWorldState start, GOAPWorldState goal)
 	
 	while (!frontier.empty()){
 
-		AstarNode* current = frontier.top().second;
+		AstarNode* frontierNode = frontier.top().second;
 		frontier.pop();
-
-		if (current->actualWs == goal) {
-			CalculatePlan(start, goal, cameFrom);
-			return;
-		}
 		
 		for each (std::pair<int, GOAPAction*> action in actions)
 		{
+			AstarNode* current = new AstarNode();
+			current->action = frontierNode->action;
+			current->f = frontierNode->f;
+			current->g = frontierNode->g;
+			current->h = frontierNode->h;
+			current->parentWs = frontierNode->parentWs;
+			current->actualWs = frontierNode->actualWs;
+
 			if (action.second->preconditions == current->parentWs) {
 				
 				current->action = action.second;
 				current->actualWs = action.second->effects;
 
+				if (current->actualWs == goal) {
+					CalculatePlan(start, goal, cameFrom);
+					firstIterNoPlan = false;
+					return;
+				}
+
 				bool hasFoundIt = false;
 				float newCost = 0;
 				int foundIter = 0;
 
-				for (int iter = 0; iter < costSoFar.size() && !hasFoundIt; iter++) {
+				/*for (int iter = 0; iter < costSoFar.size() && !hasFoundIt; iter++) {
 
 					if (current->action == costSoFar[iter].first->action)
 					{
@@ -105,18 +116,19 @@ void GOAP_Alg::AStar(GOAPWorldState start, GOAPWorldState goal)
 						newCost = costSoFar[iter].second;
 						foundIter = iter;
 					}
-				}
+				}*/
 
 				if (dynamic_cast<GOAPAction_GoToObject*>(action.second) != NULL) {
 
 					for each (Object * obj in simulatedAgent->getScene()->getKeyPositions()) {
 						if (obj->index == action.second->preconditions.value.first) {
-							simulatedAgent->setPosition(obj->position);
+							simulatedAgent->setPosition(simulatedAgent->getScene()->getMaze()->cell2pix(obj->position));
 						}
 					}					
 				}//if there were other actions, make agent met preconditions
 				
 				newCost += action.second->GetCost(simulatedAgent);
+				printf_s("%f \n", newCost);
 
 				AstarNode* newNode = new AstarNode();
 
@@ -126,14 +138,7 @@ void GOAP_Alg::AStar(GOAPWorldState start, GOAPWorldState goal)
 
 				newNode->parentWs = current->actualWs;
 
-				if (!hasFoundIt)
-				{				
-					costSoFar.push_back(std::make_pair(newNode, newCost));
-					cameFrom.push_back(std::make_pair(current, newNode));
-					frontier.push(std::pair<float, AstarNode*>(newNode->f, newNode));
-
-				}
-				else if (newCost < costSoFar[foundIter].second)
+				/*if (newCost < costSoFar[foundIter].second)
 				{
 					costSoFar[foundIter].second = newCost;
 					costSoFar[foundIter].first->g = newCost;
@@ -141,16 +146,18 @@ void GOAP_Alg::AStar(GOAPWorldState start, GOAPWorldState goal)
 					costSoFar[foundIter].first->f = costSoFar[foundIter].first->g + costSoFar[foundIter].first->h;
 					cameFrom[foundIter].first = current;
 
-
 					frontier.push(std::pair<float, AstarNode*>(newCost + current->h, newNode));
+				}*/
 
-				}
-				
+				costSoFar.push_back(std::make_pair(newNode, newCost));
+				cameFrom.push_back(std::make_pair(current, newNode));
+				frontier.push(std::pair<float, AstarNode*>(newNode->f, newNode));
+
 			}
-
 
 		}
 		
 	}
 
+	firstIterNoPlan = true;
 }
